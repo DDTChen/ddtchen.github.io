@@ -1,24 +1,26 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
-  <title>轉移到商店中</title>
+  <title>歡迎使用智慧大師</title>
     <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
 </head>
 <body>
-  <h1>轉移到商店</h1>
-  <p>這個網頁將會偵測你的瀏覽器，轉移到適合你的商店！</p>
+  <h1>歡迎使用智慧大師</h1>
+  <p>你可以從連結下載智慧大師，若已下載可以直接開始使用！</p>
 </body>
     <!-- jQuery (Bootstrap 所有外掛均需要使用) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
-    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
 <script>
     if((navigator.userAgent.match(/iPhone/i)) || 
         (navigator.userAgent.match(/iPod/i)) ||
         (navigator.userAgent.match(/iPad/i))) {
           console.log('This Page open by ios');
-          window.location = 'itms-apps://itunes.apple.com/tw/app/pages/id556802608';
+        //   window.location = 'itms-apps://itunes.apple.com/tw/app/pages/id556802608';
+          window.location = 'twitter://';
+
     } else if (navigator.userAgent.match(/android/i)) {
           console.log('This Page open by android');
           window.location = 'market://details?id=tw.net.sun.hongu.general';
