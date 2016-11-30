@@ -7,8 +7,8 @@
 </head>
 <body>
   <h1>歡迎使用智慧大師</h1>
-  <p>你可以從連結下載智慧大師，若已下載可以直接開始使用！</p>
-  <p><button onclick="window.location = 'itms-apps://itunes.apple.com/tw/app/pages/id556802608';">下載</button></p>
+  <p>你可以從連結下載智慧大師，</p><p>若已下載可以直接開始使用！</p>
+  <p><button onclick="gotoStore();">下載</button></p>
   <p><button onclick="window.location = 'hgwmgeneral://'">開啟</button></p>
 </body>
     <!-- jQuery (Bootstrap 所有外掛均需要使用) -->
@@ -16,20 +16,31 @@
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
     <!--<script src="js/bootstrap.min.js"></script>-->
 <script>
-    if((navigator.userAgent.match(/iPhone/i)) || 
-        (navigator.userAgent.match(/iPod/i)) ||
-        (navigator.userAgent.match(/iPad/i))) {
-          console.log('This Page open by ios');
-        //   window.location = 'itms-apps://itunes.apple.com/tw/app/pages/id556802608';
-        //   window.location = 'twitter://';
-        //   window.open('twitter://');
+    
+    var gotoStore = funcation () {
+        if((navigator.userAgent.match(/iPhone/i)) || 
+            (navigator.userAgent.match(/iPod/i)) ||
+            (navigator.userAgent.match(/iPad/i))) {
+              console.log('This Page open by ios');
+              window.location = 'itms-apps://itunes.apple.com/tw/app/pages/id556802608';
+        } else if (navigator.userAgent.match(/android/i)) {
+              console.log('This Page open by android');
+              window.location = 'market://details?id=tw.net.sun.hongu.general';
+        } else {
+              console.log('This Page open by other');
+        }
+    };
 
 
-    } else if (navigator.userAgent.match(/android/i)) {
-          console.log('This Page open by android');
-          window.location = 'market://details?id=tw.net.sun.hongu.general';
-    } else {
-          console.log('This Page open by other');
-    }
+    // if((navigator.userAgent.match(/iPhone/i)) || 
+    //     (navigator.userAgent.match(/iPod/i)) ||
+    //     (navigator.userAgent.match(/iPad/i))) {
+    //       console.log('This Page open by ios');
+    // } else if (navigator.userAgent.match(/android/i)) {
+    //       console.log('This Page open by android');
+    //       window.location = 'market://details?id=tw.net.sun.hongu.general';
+    // } else {
+    //       console.log('This Page open by other');
+    // }
 </script>
 </html>
